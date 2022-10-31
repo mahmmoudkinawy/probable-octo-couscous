@@ -3,7 +3,7 @@ servies:
   - docker
 
 before-install:
-  - docker build -t kino2001/docker-vue
+  - docker build -t kino2001/docker-vue - f Dockerfile.dev .
 
 script:
-  - docker run -e CI=true kino2001/docker-vue
+  - docker run kino2001/docker-vue

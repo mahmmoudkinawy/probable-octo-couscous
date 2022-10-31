@@ -1,0 +1,9 @@
+sudo: required
+servies:
+  - docker
+
+before-install:
+  - docker build -t kino2001/docker-vue
+
+script:
+  - docker run -e CI=true kino2001/docker-vue
